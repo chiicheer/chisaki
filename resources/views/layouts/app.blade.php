@@ -21,21 +21,25 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-    @include('inc.navbar')
-    <br>
-    <div class='jumbotron'>
-    <h1>Hello, how are you?</h1>
-    @include('inc.messages')
-    @yield('content')
-    </div>
-    @include('inc.footbar')
-    </div>
 
-    <script src="{{asset('js/app.js')}}"></script>
-        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <div id="app">
+       
+@include('inc.navbar')
+       
+<div class="container">
+    @include('inc.messages')
+            @yield('content')
+
+</div>
+
+</div>
+  <script src="{{asset('js/app.js')}}></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
+
 </body>
 </html>
+
+
